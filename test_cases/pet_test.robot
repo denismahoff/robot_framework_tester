@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../resources/resources2.robot
+Resource    ../resources/resources.robot
 Variables    ../resources/variables.py
 
 *** Test Cases ***

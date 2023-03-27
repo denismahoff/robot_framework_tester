@@ -8,8 +8,7 @@ Standart user add product to cart Test Case
     [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
     [Teardown]    Close Browser and Log
     Login to webpage    ${standard_user}    ${password}
-    Add product to card    //*[@id="item_4_title_link"]/div    //*[@id="inventory_container"]/div/div[1]/div[2]/div[2]/div    add-to-cart-sauce-labs-backpack
-    sleep    3
+    Add product to card    ${product_name_slb}   ${product_price_slb}    ${add_btn_slb}
     Open shopping cart
 
 Locked out user login Test Case

@@ -21,17 +21,17 @@ Login to webpage
     click button    id:login-button
     log    name: {user_name}, password: {user_password}
     location should be    https://www.saucedemo.com/inventory.html
-    sleep    3
 
 Logout from webpage
     click button    id:react-burger-menu-btn
     wait until element is visible    id:logout_sidebar_link
     click link    id:logout_sidebar_link
     location should be    https://www.saucedemo.com/
-    sleep    3
+
 Change sorting method
     [Arguments]    ${sorting_method}
     select from list by value    class:product_sort_container    ${sorting_method}
+
 Add product to card
     [Arguments]    ${product_id}    ${product_price_id}    ${add_bt_id}
     ${product_name}=    get text    xpath:${product_id}
@@ -40,13 +40,16 @@ Add product to card
     log    Product price: ${product_price}
     ${add_bt}=    click button    id:${add_bt_id}
 #    page should contain element    id:remove-sauce-labs-backpack
+
 Remove product to card
     [Arguments]    ${remove_product_id}
     ${rem_product_id}=    click button    id:${remove_product_id}
+
 Open shopping cart
     set screenshot directory    ../screenshots
     click link    class:shopping_cart_link
     capture element screenshot    xpath://*[@id="cart_contents_container"]
+
 Checkout shopping cart
     [Arguments]    ${fname}    ${lname}    ${postalcode}
     click button    id:checkout

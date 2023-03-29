@@ -17,8 +17,12 @@ za = 'za'
 lohi = 'lohi'
 hilo = 'hilo'
 
-# Sauce Labs Backpack product info
-product_name_slb = '//*[@id="item_4_title_link"]/div'
-product_price_slb = '//*[@id="inventory_container"]/div/div[1]/div[2]/div[2]/div'
-add_btn_slb = 'add-to-cart-sauce-labs-backpack'
-#
+# Sauce Labs product info
+product_name_bp = '//*[@id="item_4_title_link"]/div'
+product_price_bp = '//*[@id="inventory_container"]/div/div[1]/div[2]/div[2]/div'
+add_btn_bp = 'add-to-cart-sauce-labs-backpack'
+
+product_name_ts = '//*[@id="item_1_title_link"]/div'
+product_price_ts = '//*[@id="inventory_container"]/div/div[3]/div[2]/div[2]/div'
+add_btn_ts = 'add-to-cart-sauce-labs-bolt-t-shirt'
+

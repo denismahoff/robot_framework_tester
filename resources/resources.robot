@@ -21,6 +21,7 @@ Login to webpage
     click button    id:login-button
     log    name: {user_name}, password: {user_password}
     location should be    https://www.saucedemo.com/inventory.html
+    capture page screenshot
 
 Logout from webpage
     click button    id:react-burger-menu-btn
@@ -29,8 +30,10 @@ Logout from webpage
     location should be    https://www.saucedemo.com/
 
 Change sorting method
+    set screenshot directory    ../screenshots
     [Arguments]    ${sorting_method}
     select from list by value    class:product_sort_container    ${sorting_method}
+    capture page screenshot
 
 Add product to card
     [Arguments]    ${product_id}    ${product_price_id}    ${add_bt_id}
@@ -51,6 +54,7 @@ Open shopping cart
     capture element screenshot    xpath://*[@id="cart_contents_container"]
 
 Checkout shopping cart
+    set screenshot directory    ../screenshots
     [Arguments]    ${fname}    ${lname}    ${postalcode}
     click button    id:checkout
     input text    id:first-name    ${fname}
@@ -60,4 +64,4 @@ Checkout shopping cart
     capture element screenshot    id:root
     click button    id:finish
     location should be    https://www.saucedemo.com/checkout-complete.html
-
+    capture page screenshot

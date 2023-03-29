@@ -1,270 +1,853 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.10.8 on win32)" generated="20230323 23:41:28.669" rpa="false" schemaversion="3">
-<suite id="s1" name="Pet Test2" source="C:\Users\makhovdv\PycharmProjects\robot_framework_tester\test_cases\pet_test2.robot">
-<test id="s1-t1" name="Standart user add product to cart Test Case" line="7">
-<kw name="Open Browser and Maximize" library="resources2" type="SETUP">
+<robot generator="Robot 6.0.2 (Python 3.10.8 on win32)" generated="20230329 17:42:05.756" rpa="false" schemaversion="3">
+<suite id="s1" name="Smoke Test Suite" source="C:\Users\makhovdv\PycharmProjects\robot_framework_tester\test_cases\smoke_test_suite.robot">
+<test id="s1-t1" name="Standart user login Test Case" line="7">
+<kw name="Open Browser and Maximize" library="resources" type="SETUP">
 <arg>${url}</arg>
 <arg>${browser_name}</arg>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${user_url}</arg>
 <arg>${user_browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230323 23:41:28.920" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20230323 23:41:28.919" endtime="20230323 23:41:52.714"/>
+<msg timestamp="20230329 17:42:06.027" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230329 17:42:06.026" endtime="20230329 17:42:29.123"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230323 23:41:52.714" endtime="20230323 23:41:52.833"/>
+<status status="PASS" starttime="20230329 17:42:29.124" endtime="20230329 17:42:29.251"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Starting Test with ${user_browser}}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230323 23:41:52.834" level="INFO">Starting Test with Chrome}</msg>
-<status status="PASS" starttime="20230323 23:41:52.834" endtime="20230323 23:41:52.834"/>
+<msg timestamp="20230329 17:42:29.252" level="INFO">Starting Test with Chrome}</msg>
+<status status="PASS" starttime="20230329 17:42:29.252" endtime="20230329 17:42:29.252"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Test URL: ${user_url}}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230323 23:41:52.835" level="INFO">Test URL: https://www.saucedemo.com/}</msg>
-<status status="PASS" starttime="20230323 23:41:52.835" endtime="20230323 23:41:52.835"/>
+<msg timestamp="20230329 17:42:29.253" level="INFO">Test URL: https://www.saucedemo.com/}</msg>
+<status status="PASS" starttime="20230329 17:42:29.252" endtime="20230329 17:42:29.253"/>
 </kw>
-<status status="PASS" starttime="20230323 23:41:28.919" endtime="20230323 23:41:52.835"/>
+<status status="PASS" starttime="20230329 17:42:06.026" endtime="20230329 17:42:29.253"/>
 </kw>
-<kw name="Login to webpage" library="resources2">
+<kw name="Login to webpage" library="resources">
 <arg>${standard_user}</arg>
 <arg>${password}</arg>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>../screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20230323 23:41:52.837" endtime="20230323 23:41:52.840"/>
+<status status="PASS" starttime="20230329 17:42:29.254" endtime="20230329 17:42:29.255"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:user-name</arg>
 <arg>${user_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230323 23:41:52.842" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20230323 23:41:52.841" endtime="20230323 23:41:53.006"/>
+<msg timestamp="20230329 17:42:29.256" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230329 17:42:29.255" endtime="20230329 17:42:29.403"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:password</arg>
 <arg>${user_password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230323 23:41:53.007" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg timestamp="20230323 23:41:53.055" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230323 23:41:53.119" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230323 23:41:53.006" endtime="20230323 23:41:53.119"/>
+<msg timestamp="20230329 17:42:29.404" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230329 17:42:29.443" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230329 17:42:29.486" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230329 17:42:29.403" endtime="20230329 17:42:29.486"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230323 23:41:53.120" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20230323 23:41:53.119" endtime="20230323 23:41:53.205"/>
+<msg timestamp="20230329 17:42:29.487" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230329 17:42:29.486" endtime="20230329 17:42:29.577"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>name: {user_name}, password: {user_password}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230323 23:41:53.206" level="INFO">name: {user_name}, password: {user_password}</msg>
-<status status="PASS" starttime="20230323 23:41:53.205" endtime="20230323 23:41:53.206"/>
+<msg timestamp="20230329 17:42:29.579" level="INFO">name: {user_name}, password: {user_password}</msg>
+<status status="PASS" starttime="20230329 17:42:29.578" endtime="20230329 17:42:29.579"/>
 </kw>
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>https://www.saucedemo.com/inventory.html</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20230323 23:41:53.210" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
-<status status="PASS" starttime="20230323 23:41:53.206" endtime="20230323 23:41:53.210"/>
+<msg timestamp="20230329 17:42:29.586" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<status status="PASS" starttime="20230329 17:42:29.579" endtime="20230329 17:42:29.586"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230323 23:41:56.222" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230323 23:41:53.211" endtime="20230323 23:41:56.222"/>
+<status status="PASS" starttime="20230329 17:42:29.253" endtime="20230329 17:42:29.586"/>
 </kw>
-<status status="PASS" starttime="20230323 23:41:52.836" endtime="20230323 23:41:56.222"/>
-</kw>
-<kw name="Add product to card" library="resources2">
-<arg>//*[@id="item_4_title_link"]/div</arg>
-<arg>//*[@id="inventory_container"]/div/div[1]/div[2]/div[2]/div</arg>
-<arg>add-to-cart-sauce-labs-backpack</arg>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${product_name}</var>
-<arg>xpath:${product_id}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230323 23:41:56.254" level="INFO">${product_name} = Sauce Labs Backpack</msg>
-<status status="PASS" starttime="20230323 23:41:56.224" endtime="20230323 23:41:56.254"/>
-</kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${product_price}</var>
-<arg>xpath:${product_price_id}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20230323 23:41:56.273" level="INFO">${product_price} = $29.99</msg>
-<status status="PASS" starttime="20230323 23:41:56.254" endtime="20230323 23:41:56.273"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Product name: ${product_name}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230323 23:41:56.273" level="INFO">Product name: Sauce Labs Backpack</msg>
-<status status="PASS" starttime="20230323 23:41:56.273" endtime="20230323 23:41:56.273"/>
-</kw>
-<kw name="Log" library="BuiltIn">
-<arg>Product price: ${product_price}</arg>
-<doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230323 23:41:56.273" level="INFO">Product price: $29.99</msg>
-<status status="PASS" starttime="20230323 23:41:56.273" endtime="20230323 23:41:56.273"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<var>${add_bt}</var>
-<arg>id:${add_bt_id}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230323 23:41:56.274" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
-<msg timestamp="20230323 23:41:56.315" level="INFO">${add_bt} = None</msg>
-<status status="PASS" starttime="20230323 23:41:56.274" endtime="20230323 23:41:56.315"/>
-</kw>
-<status status="PASS" starttime="20230323 23:41:56.223" endtime="20230323 23:41:56.315"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230323 23:41:59.324" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20230323 23:41:56.316" endtime="20230323 23:41:59.324"/>
-</kw>
-<kw name="Open shopping cart" library="resources2">
-<kw name="Set Screenshot Directory" library="SeleniumLibrary">
-<arg>../screenshots</arg>
-<doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20230323 23:41:59.326" endtime="20230323 23:41:59.328"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>class:shopping_cart_link</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230323 23:41:59.329" level="INFO">Clicking link 'class:shopping_cart_link'.</msg>
-<status status="PASS" starttime="20230323 23:41:59.328" endtime="20230323 23:41:59.377"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>xpath://*[@id="cart_contents_container"]</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20230323 23:41:59.554" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/selenium-element-screenshot-4.png"&gt;&lt;img src="../screenshots/selenium-element-screenshot-4.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20230323 23:41:59.377" endtime="20230323 23:41:59.554"/>
-</kw>
-<status status="PASS" starttime="20230323 23:41:59.325" endtime="20230323 23:41:59.554"/>
-</kw>
-<kw name="Close Browser and Log" library="resources2" type="TEARDOWN">
+<kw name="Close Browser and Log" library="resources" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230323 23:41:59.555" endtime="20230323 23:42:01.738"/>
+<status status="PASS" starttime="20230329 17:42:29.587" endtime="20230329 17:42:31.767"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Finished test.</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230323 23:42:01.738" level="INFO">Finished test.</msg>
-<status status="PASS" starttime="20230323 23:42:01.738" endtime="20230323 23:42:01.738"/>
+<msg timestamp="20230329 17:42:31.767" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20230329 17:42:31.767" endtime="20230329 17:42:31.767"/>
 </kw>
-<status status="PASS" starttime="20230323 23:41:59.555" endtime="20230323 23:42:01.739"/>
+<status status="PASS" starttime="20230329 17:42:29.587" endtime="20230329 17:42:31.767"/>
 </kw>
-<status status="PASS" starttime="20230323 23:41:28.919" endtime="20230323 23:42:01.739"/>
+<status status="PASS" starttime="20230329 17:42:06.025" endtime="20230329 17:42:31.768"/>
 </test>
-<test id="s1-t2" name="Locked out user login Test Case" line="15">
-<kw name="Open Browser and Maximize" library="resources2" type="SETUP">
+<test id="s1-t2" name="Standart user add product to cart Test Case" line="12">
+<kw name="Open Browser and Maximize" library="resources" type="SETUP">
 <arg>${url}</arg>
 <arg>${browser_name}</arg>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${user_url}</arg>
 <arg>${user_browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230323 23:42:01.746" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20230323 23:42:01.745" endtime="20230323 23:42:24.625"/>
+<msg timestamp="20230329 17:42:31.772" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230329 17:42:31.771" endtime="20230329 17:42:54.669"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230323 23:42:24.625" endtime="20230323 23:42:24.753"/>
+<status status="PASS" starttime="20230329 17:42:54.669" endtime="20230329 17:42:54.788"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Starting Test with ${user_browser}}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230323 23:42:24.753" level="INFO">Starting Test with Chrome}</msg>
-<status status="PASS" starttime="20230323 23:42:24.753" endtime="20230323 23:42:24.753"/>
+<msg timestamp="20230329 17:42:54.789" level="INFO">Starting Test with Chrome}</msg>
+<status status="PASS" starttime="20230329 17:42:54.789" endtime="20230329 17:42:54.789"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Test URL: ${user_url}}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230323 23:42:24.754" level="INFO">Test URL: https://www.saucedemo.com/}</msg>
-<status status="PASS" starttime="20230323 23:42:24.753" endtime="20230323 23:42:24.754"/>
+<msg timestamp="20230329 17:42:54.789" level="INFO">Test URL: https://www.saucedemo.com/}</msg>
+<status status="PASS" starttime="20230329 17:42:54.789" endtime="20230329 17:42:54.789"/>
 </kw>
-<status status="PASS" starttime="20230323 23:42:01.743" endtime="20230323 23:42:24.754"/>
+<status status="PASS" starttime="20230329 17:42:31.771" endtime="20230329 17:42:54.790"/>
 </kw>
-<kw name="Login to webpage" library="resources2">
-<arg>${locked_out_user}</arg>
+<kw name="Login to webpage" library="resources">
+<arg>${standard_user}</arg>
 <arg>${password}</arg>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>../screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20230323 23:42:24.755" endtime="20230323 23:42:24.757"/>
+<status status="PASS" starttime="20230329 17:42:54.793" endtime="20230329 17:42:54.794"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:user-name</arg>
 <arg>${user_name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230323 23:42:24.758" level="INFO">Typing text 'locked_out_user' into text field 'id:user-name'.</msg>
-<status status="PASS" starttime="20230323 23:42:24.757" endtime="20230323 23:42:24.889"/>
+<msg timestamp="20230329 17:42:54.795" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230329 17:42:54.795" endtime="20230329 17:42:54.935"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:password</arg>
 <arg>${user_password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20230323 23:42:24.890" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg timestamp="20230323 23:42:24.928" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20230323 23:42:24.974" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20230323 23:42:24.889" endtime="20230323 23:42:24.974"/>
+<msg timestamp="20230329 17:42:54.936" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230329 17:42:54.981" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230329 17:42:55.038" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230329 17:42:54.935" endtime="20230329 17:42:55.038"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230323 23:42:24.974" level="INFO">Clicking button 'id:login-button'.</msg>
-<status status="PASS" starttime="20230323 23:42:24.974" endtime="20230323 23:42:25.023"/>
+<msg timestamp="20230329 17:42:55.038" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230329 17:42:55.038" endtime="20230329 17:42:55.136"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>name: {user_name}, password: {user_password}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230323 23:42:25.023" level="INFO">name: {user_name}, password: {user_password}</msg>
-<status status="PASS" starttime="20230323 23:42:25.023" endtime="20230323 23:42:25.023"/>
+<msg timestamp="20230329 17:42:55.136" level="INFO">name: {user_name}, password: {user_password}</msg>
+<status status="PASS" starttime="20230329 17:42:55.136" endtime="20230329 17:42:55.137"/>
 </kw>
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>https://www.saucedemo.com/inventory.html</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20230323 23:42:25.174" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/selenium-screenshot-13.png"&gt;&lt;img src="../screenshots/selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230323 23:42:25.174" level="FAIL">Location should have been 'https://www.saucedemo.com/inventory.html' but was 'https://www.saucedemo.com/'.</msg>
-<status status="FAIL" starttime="20230323 23:42:25.023" endtime="20230323 23:42:25.177"/>
+<msg timestamp="20230329 17:42:55.150" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<status status="PASS" starttime="20230329 17:42:55.137" endtime="20230329 17:42:55.150"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20230323 23:42:25.177" endtime="20230323 23:42:25.177"/>
+<status status="PASS" starttime="20230329 17:42:54.791" endtime="20230329 17:42:55.150"/>
 </kw>
-<status status="FAIL" starttime="20230323 23:42:24.755" endtime="20230323 23:42:25.177"/>
+<kw name="Add product to card" library="resources">
+<arg>${product_name_bp}</arg>
+<arg>${product_price_bp}</arg>
+<arg>${add_btn_bp}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_name}</var>
+<arg>xpath:${product_id}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230329 17:42:55.174" level="INFO">${product_name} = Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20230329 17:42:55.151" endtime="20230329 17:42:55.174"/>
 </kw>
-<kw name="Close Browser and Log" library="resources2" type="TEARDOWN">
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_price}</var>
+<arg>xpath:${product_price_id}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230329 17:42:55.202" level="INFO">${product_price} = $29.99</msg>
+<status status="PASS" starttime="20230329 17:42:55.174" endtime="20230329 17:42:55.202"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Product name: ${product_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:42:55.202" level="INFO">Product name: Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20230329 17:42:55.202" endtime="20230329 17:42:55.202"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Product price: ${product_price}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:42:55.202" level="INFO">Product price: $29.99</msg>
+<status status="PASS" starttime="20230329 17:42:55.202" endtime="20230329 17:42:55.202"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<var>${add_bt}</var>
+<arg>id:${add_bt_id}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:42:55.203" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<msg timestamp="20230329 17:42:55.250" level="INFO">${add_bt} = None</msg>
+<status status="PASS" starttime="20230329 17:42:55.203" endtime="20230329 17:42:55.250"/>
+</kw>
+<status status="PASS" starttime="20230329 17:42:55.150" endtime="20230329 17:42:55.250"/>
+</kw>
+<kw name="Open shopping cart" library="resources">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230329 17:42:55.251" endtime="20230329 17:42:55.252"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>class:shopping_cart_link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230329 17:42:55.252" level="INFO">Clicking link 'class:shopping_cart_link'.</msg>
+<status status="PASS" starttime="20230329 17:42:55.252" endtime="20230329 17:42:55.328"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>xpath://*[@id="cart_contents_container"]</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230329 17:42:55.477" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/selenium-element-screenshot-1.png"&gt;&lt;img src="../screenshots/selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230329 17:42:55.329" endtime="20230329 17:42:55.477"/>
+</kw>
+<status status="PASS" starttime="20230329 17:42:55.251" endtime="20230329 17:42:55.477"/>
+</kw>
+<kw name="Close Browser and Log" library="resources" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230323 23:42:25.178" endtime="20230323 23:42:27.328"/>
+<status status="PASS" starttime="20230329 17:42:55.478" endtime="20230329 17:42:57.641"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Finished test.</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230323 23:42:27.329" level="INFO">Finished test.</msg>
-<status status="PASS" starttime="20230323 23:42:27.328" endtime="20230323 23:42:27.329"/>
+<msg timestamp="20230329 17:42:57.642" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20230329 17:42:57.641" endtime="20230329 17:42:57.642"/>
 </kw>
-<status status="PASS" starttime="20230323 23:42:25.177" endtime="20230323 23:42:27.329"/>
+<status status="PASS" starttime="20230329 17:42:55.478" endtime="20230329 17:42:57.642"/>
 </kw>
-<status status="FAIL" starttime="20230323 23:42:01.742" endtime="20230323 23:42:27.330">Location should have been 'https://www.saucedemo.com/inventory.html' but was 'https://www.saucedemo.com/'.</status>
+<status status="PASS" starttime="20230329 17:42:31.770" endtime="20230329 17:42:57.644"/>
 </test>
-<status status="FAIL" starttime="20230323 23:41:28.676" endtime="20230323 23:42:27.334"/>
+<test id="s1-t3" name="Standart user add more product to cart Test Case" line="19">
+<kw name="Open Browser and Maximize" library="resources" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230329 17:42:57.649" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230329 17:42:57.648" endtime="20230329 17:43:20.530"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230329 17:43:20.530" endtime="20230329 17:43:20.652"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting Test with ${user_browser}}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:20.654" level="INFO">Starting Test with Chrome}</msg>
+<status status="PASS" starttime="20230329 17:43:20.652" endtime="20230329 17:43:20.654"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:20.654" level="INFO">Test URL: https://www.saucedemo.com/}</msg>
+<status status="PASS" starttime="20230329 17:43:20.654" endtime="20230329 17:43:20.654"/>
+</kw>
+<status status="PASS" starttime="20230329 17:42:57.647" endtime="20230329 17:43:20.654"/>
+</kw>
+<kw name="Login to webpage" library="resources">
+<arg>${standard_user}</arg>
+<arg>${password}</arg>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230329 17:43:20.655" endtime="20230329 17:43:20.656"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:20.657" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230329 17:43:20.656" endtime="20230329 17:43:20.806"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:20.807" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230329 17:43:20.856" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230329 17:43:20.907" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230329 17:43:20.806" endtime="20230329 17:43:20.907"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:20.907" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230329 17:43:20.907" endtime="20230329 17:43:20.997"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>name: {user_name}, password: {user_password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:20.998" level="INFO">name: {user_name}, password: {user_password}</msg>
+<status status="PASS" starttime="20230329 17:43:20.997" endtime="20230329 17:43:20.998"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230329 17:43:21.003" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<status status="PASS" starttime="20230329 17:43:20.998" endtime="20230329 17:43:21.003"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:20.655" endtime="20230329 17:43:21.003"/>
+</kw>
+<kw name="Add product to card" library="resources">
+<arg>${product_name_bp}</arg>
+<arg>${product_price_bp}</arg>
+<arg>${add_btn_bp}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_name}</var>
+<arg>xpath:${product_id}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:21.028" level="INFO">${product_name} = Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20230329 17:43:21.004" endtime="20230329 17:43:21.029"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_price}</var>
+<arg>xpath:${product_price_id}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:21.054" level="INFO">${product_price} = $29.99</msg>
+<status status="PASS" starttime="20230329 17:43:21.029" endtime="20230329 17:43:21.054"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Product name: ${product_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:21.055" level="INFO">Product name: Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20230329 17:43:21.054" endtime="20230329 17:43:21.055"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Product price: ${product_price}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:21.055" level="INFO">Product price: $29.99</msg>
+<status status="PASS" starttime="20230329 17:43:21.055" endtime="20230329 17:43:21.055"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<var>${add_bt}</var>
+<arg>id:${add_bt_id}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:21.055" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<msg timestamp="20230329 17:43:21.125" level="INFO">${add_bt} = None</msg>
+<status status="PASS" starttime="20230329 17:43:21.055" endtime="20230329 17:43:21.125"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:21.003" endtime="20230329 17:43:21.126"/>
+</kw>
+<kw name="Add product to card" library="resources">
+<arg>${product_name_ts}</arg>
+<arg>${product_price_ts}</arg>
+<arg>${add_btn_ts}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_name}</var>
+<arg>xpath:${product_id}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:21.162" level="INFO">${product_name} = Sauce Labs Bolt T-Shirt</msg>
+<status status="PASS" starttime="20230329 17:43:21.127" endtime="20230329 17:43:21.162"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_price}</var>
+<arg>xpath:${product_price_id}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:21.185" level="INFO">${product_price} = $15.99</msg>
+<status status="PASS" starttime="20230329 17:43:21.162" endtime="20230329 17:43:21.185"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Product name: ${product_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:21.185" level="INFO">Product name: Sauce Labs Bolt T-Shirt</msg>
+<status status="PASS" starttime="20230329 17:43:21.185" endtime="20230329 17:43:21.185"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Product price: ${product_price}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:21.186" level="INFO">Product price: $15.99</msg>
+<status status="PASS" starttime="20230329 17:43:21.185" endtime="20230329 17:43:21.186"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<var>${add_bt}</var>
+<arg>id:${add_bt_id}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:21.186" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-bolt-t-shirt'.</msg>
+<msg timestamp="20230329 17:43:21.224" level="INFO">${add_bt} = None</msg>
+<status status="PASS" starttime="20230329 17:43:21.186" endtime="20230329 17:43:21.224"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:21.126" endtime="20230329 17:43:21.224"/>
+</kw>
+<kw name="Open shopping cart" library="resources">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230329 17:43:21.225" endtime="20230329 17:43:21.225"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>class:shopping_cart_link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:21.226" level="INFO">Clicking link 'class:shopping_cart_link'.</msg>
+<status status="PASS" starttime="20230329 17:43:21.226" endtime="20230329 17:43:21.273"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>xpath://*[@id="cart_contents_container"]</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230329 17:43:21.425" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/selenium-element-screenshot-2.png"&gt;&lt;img src="../screenshots/selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230329 17:43:21.274" endtime="20230329 17:43:21.425"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:21.224" endtime="20230329 17:43:21.425"/>
+</kw>
+<kw name="Close Browser and Log" library="resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230329 17:43:21.426" endtime="20230329 17:43:23.584"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:23.584" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20230329 17:43:23.584" endtime="20230329 17:43:23.585"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:21.426" endtime="20230329 17:43:23.585"/>
+</kw>
+<status status="PASS" starttime="20230329 17:42:57.646" endtime="20230329 17:43:23.585"/>
+</test>
+<test id="s1-t4" name="Full check flow buying product Test Case" line="27">
+<kw name="Open Browser and Maximize" library="resources" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230329 17:43:23.588" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230329 17:43:23.588" endtime="20230329 17:43:46.538"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230329 17:43:46.538" endtime="20230329 17:43:46.668"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting Test with ${user_browser}}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:46.669" level="INFO">Starting Test with Chrome}</msg>
+<status status="PASS" starttime="20230329 17:43:46.668" endtime="20230329 17:43:46.669"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:46.669" level="INFO">Test URL: https://www.saucedemo.com/}</msg>
+<status status="PASS" starttime="20230329 17:43:46.669" endtime="20230329 17:43:46.669"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:23.587" endtime="20230329 17:43:46.669"/>
+</kw>
+<kw name="Login to webpage" library="resources">
+<arg>${standard_user}</arg>
+<arg>${password}</arg>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230329 17:43:46.670" endtime="20230329 17:43:46.671"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:46.672" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230329 17:43:46.671" endtime="20230329 17:43:46.816"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:46.816" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230329 17:43:46.853" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230329 17:43:46.890" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230329 17:43:46.816" endtime="20230329 17:43:46.890"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:46.890" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230329 17:43:46.890" endtime="20230329 17:43:46.978"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>name: {user_name}, password: {user_password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:46.979" level="INFO">name: {user_name}, password: {user_password}</msg>
+<status status="PASS" starttime="20230329 17:43:46.978" endtime="20230329 17:43:46.979"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230329 17:43:46.984" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<status status="PASS" starttime="20230329 17:43:46.979" endtime="20230329 17:43:46.984"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:46.670" endtime="20230329 17:43:46.984"/>
+</kw>
+<kw name="Add product to card" library="resources">
+<arg>${product_name_bp}</arg>
+<arg>${product_price_bp}</arg>
+<arg>${add_btn_bp}</arg>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_name}</var>
+<arg>xpath:${product_id}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:47.012" level="INFO">${product_name} = Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20230329 17:43:46.985" endtime="20230329 17:43:47.012"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${product_price}</var>
+<arg>xpath:${product_price_id}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:47.035" level="INFO">${product_price} = $29.99</msg>
+<status status="PASS" starttime="20230329 17:43:47.012" endtime="20230329 17:43:47.035"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Product name: ${product_name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:47.036" level="INFO">Product name: Sauce Labs Backpack</msg>
+<status status="PASS" starttime="20230329 17:43:47.035" endtime="20230329 17:43:47.036"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Product price: ${product_price}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:47.036" level="INFO">Product price: $29.99</msg>
+<status status="PASS" starttime="20230329 17:43:47.036" endtime="20230329 17:43:47.036"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<var>${add_bt}</var>
+<arg>id:${add_bt_id}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:47.038" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<msg timestamp="20230329 17:43:47.106" level="INFO">${add_bt} = None</msg>
+<status status="PASS" starttime="20230329 17:43:47.037" endtime="20230329 17:43:47.106"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:46.984" endtime="20230329 17:43:47.106"/>
+</kw>
+<kw name="Open shopping cart" library="resources">
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230329 17:43:47.108" endtime="20230329 17:43:47.109"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>class:shopping_cart_link</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:47.112" level="INFO">Clicking link 'class:shopping_cart_link'.</msg>
+<status status="PASS" starttime="20230329 17:43:47.110" endtime="20230329 17:43:47.175"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>xpath://*[@id="cart_contents_container"]</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230329 17:43:47.325" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/selenium-element-screenshot-3.png"&gt;&lt;img src="../screenshots/selenium-element-screenshot-3.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230329 17:43:47.175" endtime="20230329 17:43:47.325"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:47.107" endtime="20230329 17:43:47.325"/>
+</kw>
+<kw name="Checkout shopping cart" library="resources">
+<arg>Denis</arg>
+<arg>Makhov</arg>
+<arg>446012</arg>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230329 17:43:47.326" endtime="20230329 17:43:47.327"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:checkout</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:47.329" level="INFO">Clicking button 'id:checkout'.</msg>
+<status status="PASS" starttime="20230329 17:43:47.328" endtime="20230329 17:43:47.386"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:first-name</arg>
+<arg>${fname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:47.387" level="INFO">Typing text 'Denis' into text field 'id:first-name'.</msg>
+<status status="PASS" starttime="20230329 17:43:47.386" endtime="20230329 17:43:47.463"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:last-name</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:47.463" level="INFO">Typing text 'Makhov' into text field 'id:last-name'.</msg>
+<status status="PASS" starttime="20230329 17:43:47.463" endtime="20230329 17:43:47.543"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:postal-code</arg>
+<arg>${postalcode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:47.544" level="INFO">Typing text '446012' into text field 'id:postal-code'.</msg>
+<status status="PASS" starttime="20230329 17:43:47.544" endtime="20230329 17:43:47.629"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:47.631" level="INFO">Clicking button 'id:continue'.</msg>
+<status status="PASS" starttime="20230329 17:43:47.629" endtime="20230329 17:43:47.682"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>id:root</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20230329 17:43:47.828" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/selenium-element-screenshot-4.png"&gt;&lt;img src="../screenshots/selenium-element-screenshot-4.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230329 17:43:47.682" endtime="20230329 17:43:47.828"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:finish</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:43:47.829" level="INFO">Clicking button 'id:finish'.</msg>
+<status status="PASS" starttime="20230329 17:43:47.829" endtime="20230329 17:43:47.881"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/checkout-complete.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230329 17:43:47.885" level="INFO">Current location is 'https://www.saucedemo.com/checkout-complete.html'.</msg>
+<status status="PASS" starttime="20230329 17:43:47.881" endtime="20230329 17:43:47.885"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230329 17:43:48.014" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230329 17:43:47.886" endtime="20230329 17:43:48.014"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:47.325" endtime="20230329 17:43:48.014"/>
+</kw>
+<kw name="Close Browser and Log" library="resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230329 17:43:48.015" endtime="20230329 17:43:50.202"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:43:50.203" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20230329 17:43:50.202" endtime="20230329 17:43:50.203"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:48.015" endtime="20230329 17:43:50.203"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:23.587" endtime="20230329 17:43:50.204"/>
+</test>
+<test id="s1-t5" name="Check sorting method Test Case" line="35">
+<kw name="Open Browser and Maximize" library="resources" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230329 17:43:50.209" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230329 17:43:50.208" endtime="20230329 17:44:13.053"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230329 17:44:13.053" endtime="20230329 17:44:13.180"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting Test with ${user_browser}}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:44:13.180" level="INFO">Starting Test with Chrome}</msg>
+<status status="PASS" starttime="20230329 17:44:13.180" endtime="20230329 17:44:13.180"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:44:13.181" level="INFO">Test URL: https://www.saucedemo.com/}</msg>
+<status status="PASS" starttime="20230329 17:44:13.181" endtime="20230329 17:44:13.181"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:50.207" endtime="20230329 17:44:13.181"/>
+</kw>
+<kw name="Login to webpage" library="resources">
+<arg>${standard_user}</arg>
+<arg>${password}</arg>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230329 17:44:13.183" endtime="20230329 17:44:13.184"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:44:13.186" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230329 17:44:13.185" endtime="20230329 17:44:13.329"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:44:13.329" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230329 17:44:13.378" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230329 17:44:13.435" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230329 17:44:13.329" endtime="20230329 17:44:13.435"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:44:13.436" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230329 17:44:13.435" endtime="20230329 17:44:13.533"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>name: {user_name}, password: {user_password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:44:13.534" level="INFO">name: {user_name}, password: {user_password}</msg>
+<status status="PASS" starttime="20230329 17:44:13.533" endtime="20230329 17:44:13.534"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230329 17:44:13.538" level="INFO">Current location is 'https://www.saucedemo.com/inventory.html'.</msg>
+<status status="PASS" starttime="20230329 17:44:13.534" endtime="20230329 17:44:13.538"/>
+</kw>
+<status status="PASS" starttime="20230329 17:44:13.182" endtime="20230329 17:44:13.538"/>
+</kw>
+<kw name="Change sorting method" library="resources">
+<arg>${hilo}</arg>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230329 17:44:13.539" endtime="20230329 17:44:13.540"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>class:product_sort_container</arg>
+<arg>${sorting_method}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230329 17:44:13.541" level="INFO">Selecting options from selection list 'class:product_sort_container' by value hilo.</msg>
+<status status="PASS" starttime="20230329 17:44:13.541" endtime="20230329 17:44:13.644"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230329 17:44:13.870" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/selenium-screenshot-2.png"&gt;&lt;img src="../screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230329 17:44:13.644" endtime="20230329 17:44:13.871"/>
+</kw>
+<status status="PASS" starttime="20230329 17:44:13.539" endtime="20230329 17:44:13.871"/>
+</kw>
+<kw name="Close Browser and Log" library="resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230329 17:44:13.872" endtime="20230329 17:44:16.195"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:44:16.196" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20230329 17:44:16.195" endtime="20230329 17:44:16.196"/>
+</kw>
+<status status="PASS" starttime="20230329 17:44:13.871" endtime="20230329 17:44:16.196"/>
+</kw>
+<status status="PASS" starttime="20230329 17:43:50.206" endtime="20230329 17:44:16.196"/>
+</test>
+<test id="s1-t6" name="Locked out user login Test Case" line="41">
+<kw name="Open Browser and Maximize" library="resources" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser_name}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${user_url}</arg>
+<arg>${user_browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230329 17:44:16.199" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230329 17:44:16.199" endtime="20230329 17:44:39.114"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230329 17:44:39.114" endtime="20230329 17:44:39.243"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting Test with ${user_browser}}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:44:39.244" level="INFO">Starting Test with Chrome}</msg>
+<status status="PASS" starttime="20230329 17:44:39.243" endtime="20230329 17:44:39.244"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${user_url}}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:44:39.244" level="INFO">Test URL: https://www.saucedemo.com/}</msg>
+<status status="PASS" starttime="20230329 17:44:39.244" endtime="20230329 17:44:39.244"/>
+</kw>
+<status status="PASS" starttime="20230329 17:44:16.198" endtime="20230329 17:44:39.245"/>
+</kw>
+<kw name="Login to webpage" library="resources">
+<arg>${locked_out_user}</arg>
+<arg>${password}</arg>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>../screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230329 17:44:39.246" endtime="20230329 17:44:39.247"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${user_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:44:39.248" level="INFO">Typing text 'locked_out_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230329 17:44:39.247" endtime="20230329 17:44:39.558"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${user_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230329 17:44:39.559" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230329 17:44:39.609" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230329 17:44:39.662" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230329 17:44:39.558" endtime="20230329 17:44:39.662"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230329 17:44:39.663" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230329 17:44:39.662" endtime="20230329 17:44:39.727"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>name: {user_name}, password: {user_password}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:44:39.728" level="INFO">name: {user_name}, password: {user_password}</msg>
+<status status="PASS" starttime="20230329 17:44:39.727" endtime="20230329 17:44:39.728"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230329 17:44:39.890" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../screenshots/selenium-screenshot-3.png"&gt;&lt;img src="../screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230329 17:44:39.890" level="FAIL">Location should have been 'https://www.saucedemo.com/inventory.html' but was 'https://www.saucedemo.com/'.</msg>
+<status status="FAIL" starttime="20230329 17:44:39.728" endtime="20230329 17:44:39.893"/>
+</kw>
+<status status="FAIL" starttime="20230329 17:44:39.245" endtime="20230329 17:44:39.893"/>
+</kw>
+<kw name="Close Browser and Log" library="resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230329 17:44:39.893" endtime="20230329 17:44:42.061"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Finished test.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230329 17:44:42.062" level="INFO">Finished test.</msg>
+<status status="PASS" starttime="20230329 17:44:42.061" endtime="20230329 17:44:42.062"/>
+</kw>
+<status status="PASS" starttime="20230329 17:44:39.893" endtime="20230329 17:44:42.062"/>
+</kw>
+<status status="FAIL" starttime="20230329 17:44:16.198" endtime="20230329 17:44:42.063">Location should have been 'https://www.saucedemo.com/inventory.html' but was 'https://www.saucedemo.com/'.</status>
+</test>
+<status status="FAIL" starttime="20230329 17:42:05.760" endtime="20230329 17:44:42.064"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="Pet Test2">Pet Test2</stat>
+<stat pass="5" fail="1" skip="0" id="s1" name="Smoke Test Suite">Smoke Test Suite</stat>
 </suite>
 </statistics>
 <errors>

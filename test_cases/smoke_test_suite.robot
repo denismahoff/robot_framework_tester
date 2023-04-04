@@ -4,6 +4,7 @@ Resource    ../resources/resources.robot
 Variables    ../resources/variables.py
 
 *** Test Cases ***
+
 Standart user login Test Case
     [Setup]    Open Browser and Maximize    ${url}    ${browser_name}
     [Teardown]    Close Browser and Log

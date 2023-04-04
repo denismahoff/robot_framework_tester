@@ -25,4 +25,3 @@ add_btn_bp = 'add-to-cart-sauce-labs-backpack'
 product_name_ts = '//*[@id="item_1_title_link"]/div'
 product_price_ts = '//*[@id="inventory_container"]/div/div[3]/div[2]/div[2]/div'
 add_btn_ts = 'add-to-cart-sauce-labs-bolt-t-shirt'
-
